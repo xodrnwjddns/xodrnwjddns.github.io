@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WON 우리카드 | AI가 설계하는 나만의 스마트 금융</title>
+  <meta name="description" content="우리 WON AI 리뉴얼 메인 페이지 (과제용 구현)">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__top">
+        <ul class="header__util">
+          <li><a href="#">개인</a></li>
+          <li><a href="#">기업</a></li>
+          <li><a href="#">우리WON뱅킹</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <div class="header__auth">
+          <a href="#" class="strong">로그인</a>
+          <span class="bar">ㅣ</span>
+          <a href="#" class="strong">회원가입</a>
+          <button type="button" class="lang">한국어</button>
+        </div>
+      </div>
+      <div class="header__gnb">
+        <a href="#" class="brand" aria-label="WON 우리카드 홈">
+          <img src="assets/icons/logo.svg" width="39" height="26" alt="">
+          <span class="brand__name"><b>WON</b> <span>우리카드</span></span>
+          <span class="brand__badge">AI RENEWAL</span>
+        </a>
+        <nav class="gnb" id="gnb" aria-label="주 메뉴">
+          <a href="#asset">AI 자산관리</a>
+          <a href="#consumption">AI 소비분석</a>
+          <a href="#quick">금융상품</a>
+          <a href="#cards">카드혜택</a>
+          <a href="#security">스마트 안심뱅킹</a>
+          <a href="#cta">라이프</a>
+        </nav>
+        <div class="header__actions">
+          <button type="button" class="icon-btn" id="searchBtn" aria-label="검색"><img src="assets/icons/search.svg" width="24" height="24" alt=""></button>
+          <button type="button" class="icon-btn" id="menuBtn" aria-label="전체 메뉴" aria-expanded="false" aria-controls="gnb"><img src="assets/icons/menu.svg" width="24" height="24" alt=""></button>
+        </div>
+      </div>
+    </div>
+    <div class="search-panel" id="searchPanel" hidden>
+      <div class="container">
+        <form class="search-form" id="searchForm">
+          <label for="searchInput" class="sr-only">검색어</label>
+          <input id="searchInput" type="search" placeholder="AI에게 물어보세요 · 예) 이번 달 소비 줄이는 방법" autocomplete="off">
+          <button type="submit">검색</button>
+        </form>
+        <div class="search-tags"><span>추천</span><button type="button">자산 배분</button><button type="button">정기구독 해지</button><button type="button">카드 추천</button><button type="button">보이스피싱</button></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <div class="hero__glow g1"></div><div class="hero__glow g2"></div><div class="hero__glow g3"></div>
+      <div class="hero__line"></div>
+      <div class="hero__dots" aria-hidden="true"><i style="left:22%;top:18%"></i><i style="left:83%;top:65%"></i><i style="left:84%;top:27%"></i><i style="left:11%;top:71%"></i><i style="left:20%;top:67%"></i></div>
+
+      <div class="float-tile tile-card" data-depth="18" aria-hidden="true"><img src="assets/icons/hero-credit-card.svg" width="28" height="28" alt=""></div>
+      <div class="float-tile tile-trend" data-depth="28" aria-hidden="true"><img src="assets/icons/hero-trending-up.svg" width="28" height="28" alt=""></div>
+      <div class="float-tile tile-shield" data-depth="22" aria-hidden="true"><img src="assets/icons/hero-shield.svg" width="26" height="26" alt=""></div>
+      <div class="float-tile tile-star" data-depth="34" aria-hidden="true"><img src="assets/icons/hero-star.svg" width="20" height="20" alt=""></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="pill reveal">완전히 새로워진 우리은행 AI 3.0</span>
+          <h1 class="hero__title reveal" data-delay="1">AI가 설계하는<br>나만의 스마트 금융</h1>
+          <p class="hero__desc reveal" data-delay="2">어려운 자산 배분과 복잡한 우대 금리 분석도 이제는 AI 비서가 알아서 해줍니다.<br>당신만의 스마트 금융 파트너, 우리 WON AI를 경험해보세요.</p>
+          <ul class="hero__stats reveal" data-delay="3">
+            <li><strong data-count="1200" data-suffix="만+" data-format="comma">0</strong><span>활성 AI 사용자</span></li>
+            <li class="divider" aria-hidden="true"></li>
+            <li><strong class="grad" data-count="98.7" data-suffix="%" data-decimals="1">0</strong><span>분석 정확도</span></li>
+            <li class="divider" aria-hidden="true"></li>
+            <li><strong>24/7</strong><span>AI 실시간 케어</span></li>
+          </ul>
+          <div class="hero__btns reveal" data-delay="4">
+            <a href="#asset" class="btn btn--primary">AI 자산 분석하기 <img src="assets/icons/arrow-right.svg" width="18" height="18" alt=""></a>
+            <a href="#quick" class="btn btn--ghost">서비스 더보기</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="assistant reveal" data-delay="2">
+            <p class="assistant__name">우리 WON 비서</p>
+            <span class="assistant__status" id="assistantStatus">● AI 분석 중...</span>
+            <div class="mini-chart">
+              <div class="mini-chart__bars" id="miniBars">
+                <i style="--h:22"></i><i style="--h:35"></i><i style="--h:27"></i><i style="--h:45"></i><i class="g" style="--h:31"></i><i class="g hi" style="--h:53"></i>
+              </div>
+              <p class="mini-chart__label"><span>수익률</span> <b id="miniRate">+12.4%</b></p>
+            </div>
+            <div class="assistant__tags">
+              <button type="button" class="tag is-on" data-mode="portfolio">포트폴리오 분석</button>
+              <button type="button" class="tag" data-mode="report">소비 리포트</button>
+              <button type="button" class="tag" data-mode="card">카드 추천</button>
+            </div>
+          </div>
+          <div class="mascot" id="heroMascot">
+            <img src="assets/img/mascot-hero.png" alt="우리 WON AI 캐릭터" class="mascot__img" data-fallback>
+            <div class="mascot__shadow"></div>
+          </div>
+        </div>
+      </div>
+      <a href="#quick" class="scroll-cue" aria-label="아래로 스크롤"><span></span></a>
+    </section>
+
+    <!-- ================= QUICK SERVICES ================= -->
+    <section class="quick" id="quick">
+      <div class="container">
+        <header class="section-head center reveal">
+          <span class="pill pill--sm">빠른 서비스</span>
+          <h2 class="title-28">자주 쓰는 서비스를 빠르게</h2>
+        </header>
+        <div class="quick__grid" role="list">
+          <button type="button" class="q-card reveal" data-delay="1" role="listitem" data-tone="blue"><span class="q-ico"><img src="assets/icons/q-search.svg" width="22" height="22" alt=""></span><span class="q-txt"><b>계좌 조회</b><small>내 자산 한눈에</small></span><img class="q-chev" src="assets/icons/q-chevron.svg" width="9" height="17" alt=""></button>
+          <button type="button" class="q-card is-active reveal" data-delay="2" role="listitem" data-tone="blue"><span class="q-ico"><img src="assets/icons/q-refresh.svg" width="22" height="22" alt=""></span><span class="q-txt"><b>AI 송금</b><small>안전하고 빠르게</small></span><img class="q-chev" src="assets/icons/q-chevron.svg" width="9" height="17" alt=""></button>
+          <button type="button" class="q-card is-active reveal" data-delay="3" role="listitem" data-tone="green"><span class="q-ico"><img src="assets/icons/q-trending-up.svg" width="22" height="22" alt=""></span><span class="q-txt"><b>AI 자산관리</b><small>정밀 맞춤 컨설팅</small></span><img class="q-chev" src="assets/icons/q-chevron.svg" width="9" height="17" alt=""></button>
+          <button type="button" class="q-card is-active reveal" data-delay="4" role="listitem" data-tone="purple"><span class="q-ico"><img src="assets/icons/q-credit-card.svg" width="22" height="22" alt=""></span><span class="q-txt"><b>AI 카드추천</b><small>패턴 맞춤 카드</small></span><img class="q-chev" src="assets/icons/q-chevron.svg" width="9" height="17" alt=""></button>
+          <button type="button" class="q-card reveal" data-delay="5" role="listitem" data-tone="yellow"><span class="q-ico"><img src="assets/icons/q-link.svg" width="22" height="22" alt=""></span><span class="q-txt"><b>마이데이터</b><small>흩어진 금융 수집</small></span><img class="q-chev" src="assets/icons/q-chevron.svg" width="9" height="17" alt=""></button>
+          <button type="button" class="q-card reveal" data-delay="6" role="listitem" data-tone="green"><span class="q-ico"><img src="assets/icons/q-globe.svg" width="22" height="22" alt=""></span><span class="q-txt"><b>스마트 환전</b><small>실시간 우대 환율</small></span><img class="q-chev" src="assets/icons/q-chevron.svg" width="9" height="17" alt=""></button>
+        </div>
+        <p class="quick__hint">카드를 눌러 자주 쓰는 서비스로 고정해 보세요 · <b id="pinCount">3</b>개 고정됨</p>
+      </div>
+    </section>
+
+    <!-- ================= AI ASSET ================= -->
+    <section class="asset" id="asset">
+      <div class="sec-line"></div>
+      <div class="bg-glow" style="left:-80px;top:-60px;width:500px;height:500px;--c:rgba(30,111,255,.18)"></div>
+      <div class="bg-glow" style="right:220px;top:200px;width:600px;height:600px;--c:rgba(0,224,176,.08)"></div>
+      <div class="container split">
+        <div class="split__copy">
+          <span class="pill reveal"><i class="dot"></i>SMART PORTFOLIO</span>
+          <h2 class="title-38 reveal" data-delay="1">내 투자성향에 맞춘<br>실시간 AI 최적 자산배분</h2>
+          <p class="desc reveal" data-delay="2">실시간 시장 데이터를 분석해<br>최적의 자산 비중을 한 번에 보여주는<br>심플한 AI 자산 대시보드입니다.</p>
+          <div class="risk reveal" data-delay="3" role="radiogroup" aria-label="투자성향 선택">
+            <span class="risk__label">투자성향</span>
+            <button type="button" role="radio" aria-checked="false" data-risk="safe">안정형</button>
+            <button type="button" role="radio" aria-checked="true" data-risk="balance" class="is-on">균형형</button>
+            <button type="button" role="radio" aria-checked="false" data-risk="aggressive">공격형</button>
+          </div>
+          <a href="#asset" class="btn btn--primary reveal" data-delay="4" id="assetRun">AI 자산 분석 시작 <img src="assets/icons/arrow-right.svg" width="18" height="18" alt=""></a>
+        </div>
+
+        <div class="dash-wrap reveal" data-delay="2">
+          <div class="dash" id="dash">
+            <div class="dash__head">
+              <div><b>AI 자산 대시보드</b><small>실시간 분석 결과</small></div>
+              <span class="live"><i></i>실시간</span>
+            </div>
+            <div class="dash__body">
+              <div class="dash__summary">
+                <div class="sum-card"><small>추천 비중</small><strong id="sumWeight">62%</strong><em id="sumWeightSub">주식 42% · 채권 20%</em></div>
+                <div class="sum-card"><small>예상 수익률</small><strong class="grad" id="sumReturn">6.8%</strong><em>연간 예상 수익</em></div>
+              </div>
+              <div class="chart-card">
+                <div class="chart-card__head"><b>자산 비중</b><small>6개 자산군</small></div>
+                <div class="bars" id="assetBars">
+                  <div class="bar"><span class="bar__val">42%</span><i class="b1" style="--v:112"></i><em>주식</em></div>
+                  <div class="bar"><span class="bar__val">20%</span><i class="b2" style="--v:84"></i><em>채권</em></div>
+                  <div class="bar"><span class="bar__val">14%</span><i class="b3" style="--v:64"></i><em>부동산</em></div>
+                  <div class="bar"><span class="bar__val">10%</span><i class="b4" style="--v:48"></i><em>대체</em></div>
+                  <div class="bar"><span class="bar__val">8%</span><i class="b5" style="--v:40"></i><em>현금</em></div>
+                  <div class="bar"><span class="bar__val">6%</span><i class="b6" style="--v:32"></i><em>기타</em></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bubble" id="assetBubble">AI 분석 완료!</div>
+          <div class="side-mascot"><img src="assets/img/mascot-asset.png" alt="" data-fallback></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONSUMPTION ================= -->
+    <section class="consume" id="consumption">
+      <div class="container split split--rev">
+        <div class="report reveal">
+          <div class="report__head">
+            <b id="reportTitle">6월 소비 분석 리포트</b>
+            <div class="month-tabs" role="tablist" aria-label="월 선택">
+              <button type="button" role="tab" data-month="4">4월</button>
+              <button type="button" role="tab" data-month="5">5월</button>
+              <button type="button" role="tab" data-month="6" class="is-on" aria-selected="true">6월</button>
+            </div>
+          </div>
+          <div class="spend" id="spendBars">
+            <div class="spend__col"><i class="s1" style="--v:120"></i><b>식비</b><small>34만</small></div>
+            <div class="spend__col"><i class="s2" style="--v:80"></i><b>쇼핑</b><small>21만</small></div>
+            <div class="spend__col"><i class="s3" style="--v:50"></i><b>교통</b><small>15만</small></div>
+            <div class="spend__col"><i class="s4" style="--v:30"></i><b>구독</b><small>8만</small></div>
+          </div>
+          <div class="alert">
+            <span class="alert__ico"><img src="assets/icons/lightbulb.svg" width="16" height="16" alt=""></span>
+            <p id="reportTip"><b class="hl">식비 부문</b>에서 정기 배달앱 사용을 줄이시면 이번 달 예상 저축액을 <b>7만원</b> 더 늘릴 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="split__copy">
+          <span class="pill pill--sm reveal">SMART CONSUMPTION</span>
+          <h2 class="title-36 reveal" data-delay="1">AI가 자동으로 정리하는<br>스마트 가계부</h2>
+          <p class="desc reveal" data-delay="2">결제 데이터를 AI가 자동으로 분류해 불필요한 고정 지출과 과소비를 실시간으로 감지합니다. 목표 저축액에 맞춘 지출 가이드를 제공해 스마트한 재정 관리를 도와드려요.</p>
+          <ol class="steps">
+            <li class="step reveal" data-delay="3"><span class="step__ico"><img src="assets/icons/check-blue.svg" width="16" height="16" alt=""></span><p>AI가 자동으로 불필요한 정기구독을 감지해 해지 제안</p></li>
+            <li class="step reveal" data-delay="4"><span class="step__ico"><img src="assets/icons/check-blue.svg" width="16" height="16" alt=""></span><p>전월 대비 지출 증가를 실시간으로 감지해 알려드려요</p></li>
+            <li class="step reveal" data-delay="5"><span class="step__ico green"><img src="assets/icons/check-green.svg" width="16" height="16" alt=""></span><p>동일 연령대 평균 소비 패턴과 비교해 절약 구간을 제시</p></li>
+          </ol>
+          <a href="#consumption" class="btn btn--primary reveal" data-delay="6" id="consumeRun">소비 패턴 분석하기 <img src="assets/icons/arrow-right.svg" width="18" height="18" alt=""></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CARD BENEFITS ================= -->
+    <section class="cards" id="cards">
+      <div class="bg-glow" style="left:-200px;top:-200px;width:700px;height:700px;--c:rgba(30,111,255,.14)"></div>
+      <div class="bg-glow" style="right:-80px;top:200px;width:600px;height:600px;--c:rgba(108,47,255,.12)"></div>
+      <div class="container">
+        <header class="section-head center reveal">
+          <span class="pill pill--sm wide">CARD BENEFITS</span>
+          <h2 class="title-40">내 소비 빅데이터로 찾은 인생 카드</h2>
+          <p class="desc center">최근 3개월의 온/오프라인 쇼핑, 대중교통 이용, 마트 지출 내역을 정밀 분석해 가장 큰 캐시백 혜택을<br>주는 우리 신용카드를 추천합니다.</p>
+        </header>
+        <div class="cards__row">
+          <article class="b-card reveal" data-delay="1" tabindex="0" data-accent="#4d9fff">
+            <span class="b-card__line"></span>
+            <span class="b-card__ico blue"><img src="assets/icons/c-credit-card.svg" width="24" height="24" alt=""></span>
+            <div class="plastic plastic--dark">
+              <i class="ln l1"></i><i class="ln l2"></i><i class="ln l3"></i><i class="ln l4"></i>
+              <i class="orb o1"></i><i class="orb o2"></i>
+              <img class="chip" src="assets/icons/card-chip.svg" width="26" height="34" alt="">
+              <span class="brandmark">WOORI<br>CARD</span><span class="pname">카드의 정석2</span><i class="underline"></i>
+            </div>
+            <h3>카드의 정석 EVERY POINT</h3>
+            <p class="benefit" style="color:#7ec8ff">전 가맹점 1.2% 무제한 적립</p>
+            <hr>
+            <button type="button" class="btn btn--sm" data-apply="카드의 정석 EVERY POINT">혜택 신청하기</button>
+            <p class="note">실적 조건 없는 무제한 포인트</p>
+          </article>
+          <article class="b-card is-best reveal" data-delay="2" tabindex="0" data-accent="#00e0b0">
+            <span class="b-card__line"></span>
+            <span class="best">✦ BEST PICK</span>
+            <span class="b-card__ico green"><img src="assets/icons/c-shopping-bag.svg" width="24" height="24" alt=""></span>
+            <div class="plastic plastic--blue">
+              <i class="orb o3"></i><i class="ring r1"></i><i class="ring r2"></i><i class="lower"></i>
+              <span class="brandmark top">WOORI CARD</span><span class="pname top">카드의 정석2</span>
+              <img class="chip" src="assets/icons/card-chip.svg" width="26" height="34" alt="">
+              <i class="glowdot"></i>
+            </div>
+            <h3>카드의 정석 EVERY DISCOUNT</h3>
+            <p class="benefit" style="color:#00e0b0">온라인 쇼핑 최대 5.0% 청구할인</p>
+            <hr>
+            <button type="button" class="btn btn--sm" data-apply="카드의 정석 EVERY DISCOUNT">혜택 신청하기</button>
+            <p class="note">디지털 구독료 10% 파격 할인</p>
+          </article>
+          <article class="b-card reveal" data-delay="3" tabindex="0" data-accent="#6c2fff">
+            <span class="b-card__line purple"></span>
+            <span class="b-card__ico purple"><img src="assets/icons/c-coffee.svg" width="24" height="24" alt=""></span>
+            <div class="plastic plastic--silver">
+              <i class="orb o4"></i><i class="ring r3"></i><i class="ring r4"></i><i class="grid"></i><i class="shine"></i>
+              <img class="chip" src="assets/icons/card-chip.svg" width="26" height="34" alt="">
+              <span class="brandmark vert">CARD&nbsp;&nbsp;WOORI</span><i class="underline light"></i>
+            </div>
+            <h3>카드의 정석 TEN</h3>
+            <p class="benefit" style="color:#c8a0ff">커피, 교통, 일상 10% 집중 할인</p>
+            <hr>
+            <button type="button" class="btn btn--sm" data-apply="카드의 정석 TEN">혜택 신청하기</button>
+            <p class="note">대중교통 최대 1.5만원 캐시백</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECURITY ================= -->
+    <section class="security" id="security">
+      <div class="container split">
+        <div class="split__copy">
+          <span class="pill pill--sm reveal">STRICT SECURITY</span>
+          <h2 class="title-44 reveal" data-delay="1">한 치의 양보도 없는<br>AI 실시간 스마트 안심 보안</h2>
+          <p class="desc reveal" data-delay="2">우리는 보이스피싱과 이상 거래 징후를 0.05초 만에 선제 판별하는 AI FDS 패턴 차단 시스템을 가동합니다. 모든 불법 송금과 명의 도용 위험으로부터 당신의 금융을 보호합니다.</p>
+          <ul class="sec-stats reveal" data-delay="3">
+            <li><small>AI 파밍 탐지율</small><strong class="grad" data-count="99.9" data-suffix="%" data-decimals="1">0</strong></li>
+            <li><small>실시간 감시</small><strong>24/7</strong></li>
+            <li><small>생체 대체 인증</small><strong class="grad-green">보이스 ID</strong></li>
+          </ul>
+          <p class="blocked reveal" data-delay="4">오늘 차단한 위험 접근 <b id="blockedCount">12,480</b>건</p>
+        </div>
+
+        <div class="shield-box reveal" data-delay="2">
+          <i class="ring-o o1"></i><i class="ring-o o2"></i><i class="ring-o o3"></i>
+          <i class="hline h1"></i><i class="hline h2"></i>
+          <span class="chip-status left"><i></i>AI 보안 가동 중</span>
+          <span class="chip-status right"><img src="assets/icons/s-shield.svg" width="12" height="12" alt="">보호 활성화</span>
+          <div class="radar">
+            <i class="radar__sweep"></i>
+            <div class="radar__core"><img src="assets/img/mascot-security.png" alt="" data-fallback></div>
+          </div>
+          <div class="scanline"><i style="width:48px;opacity:.2"></i><i style="width:80px;opacity:.7"></i><i style="width:32px;opacity:.4"></i><i class="g" style="width:20px;opacity:.9"></i><i style="width:56px;opacity:.25"></i></div>
+          <p class="shield-box__title">우리 안심 지킴이 가동 중</p>
+          <p class="shield-box__sub" id="shieldSub">비정상 금융 접근 차단 시스템 1등급 활성화</p>
+          <div class="shield-box__chips">
+            <span class="s-chip"><img src="assets/icons/s-eye.svg" width="12" height="12" alt="">실시간 감시</span>
+            <span class="s-chip"><img src="assets/icons/s-lock.svg" width="12" height="12" alt="">FDS 가동</span>
+            <span class="s-chip ok"><img src="assets/icons/s-check-circle.svg" width="12" height="12" alt="">이상 없음</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA ================= -->
+    <section class="cta" id="cta">
+      <div class="container center">
+        <span class="pill pill--sm reveal">우리 WON AI · 지금 시작하세요</span>
+        <h2 class="title-40 grad-white reveal" data-delay="1">지금, 똑똑한 인공지능 금융 비서를 시작해보세요</h2>
+        <p class="cta__desc reveal" data-delay="2">우리WON뱅킹 앱을 다운받으시면 비대면으로 즉시 자산 설계 서비스를 시작할 수 있습니다.</p>
+        <div class="cta__btns reveal" data-delay="3">
+          <a href="#" class="btn btn--primary shine">App Store 다운로드 <img src="assets/icons/apple.svg" width="16" height="16" alt=""></a>
+          <a href="#" class="btn btn--ghost">Google Play 다운로드 <img src="assets/icons/circle-x.svg" width="16" height="16" alt=""></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__logo">우리은행</p><i class="footer__bar"></i>
+          <p class="footer__info">대표 ARS: 1588-9955, 1599-9955<br>해외에서 이용 시: 82-2-6958-9000<br>카드분실신고: 1588-5300</p>
+        </div>
+        <div class="footer__links">
+          <dl><dt>고객지원</dt><dd><a href="#">자주하는 질문</a></dd><dd><a href="#">온라인 고객상담</a></dd><dd><a href="#">원격 지원</a></dd><dd><a href="#">ARS안내</a></dd></dl>
+          <dl><dt>우리금융그룹</dt><dd><a href="#">우리카드</a></dd><dd><a href="#">우리금융지주</a></dd><dd><a href="#">우리종합금융</a></dd><dd><a href="#">우리자산운용</a></dd></dl>
+          <dl><dt>약관 및 정보</dt><dd><a href="#">개인정보처리방침</a></dd><dd><a href="#">신용정보취급방침</a></dd><dd><a href="#">이용약관</a></dd><dd><a href="#">소비자포털</a></dd></dl>
+        </div>
+      </div>
+      <p class="footer__copy">서울특별시 종로구 종로1길 50 더케이트윈타워 (주)우리은행 | 사업자등록번호 101-86-79070 | COPYRIGHTS WOORICARD. ALL RIGHTS RESERVED.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
